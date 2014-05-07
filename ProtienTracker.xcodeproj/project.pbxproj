@@ -22,6 +22,7 @@
 		1B61E9D119198EB200956EF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B61E9CF19198EB200956EF7 /* InfoPlist.strings */; };
 		1B61E9D319198EB200956EF7 /* ProtienTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61E9D219198EB200956EF7 /* ProtienTrackerTests.m */; };
 		1B61E9DE1919953C00956EF7 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61E9DD1919953C00956EF7 /* HistoryViewController.m */; };
+		1B61E9E0191A0F6A00956EF7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B61E9DF191A0F6A00956EF7 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1B61E9D219198EB200956EF7 /* ProtienTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtienTrackerTests.m; sourceTree = "<group>"; };
 		1B61E9DC1919953C00956EF7 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		1B61E9DD1919953C00956EF7 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		1B61E9DF191A0F6A00956EF7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				1B61E9AE19198EB200956EF7 /* Supporting Files */,
 				1B61E9DC1919953C00956EF7 /* HistoryViewController.h */,
 				1B61E9DD1919953C00956EF7 /* HistoryViewController.m */,
+				1B61E9DF191A0F6A00956EF7 /* Settings.bundle */,
 			);
 			path = ProtienTracker;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B61E9E0191A0F6A00956EF7 /* Settings.bundle in Resources */,
 				1B61E9C019198EB200956EF7 /* Images.xcassets in Resources */,
 				1B61E9B219198EB200956EF7 /* InfoPlist.strings in Resources */,
 				1B61E9BB19198EB200956EF7 /* Main.storyboard in Resources */,

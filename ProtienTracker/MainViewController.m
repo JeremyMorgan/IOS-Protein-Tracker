@@ -18,7 +18,6 @@
     self = [super initWithCoder:aDecoder];
     if (self){
         amountHistory = [[NSMutableArray alloc] init];
-        
     }
     return self;
 }
@@ -28,7 +27,21 @@
 {
     [super viewDidLoad];
     
+    NSInteger goal = [[NSUserDefaults standardUserDefaults] integerForKey:@"goal"];
+    self.goalLabel.text = [NSString stringWithFormat:@"%d", goal];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(goalChanged:) name:NSUserDefaultsDidChangeNotification object:Nil];
 }
+- (void)goalChanged:(NSNotification *)notification {
+
+    NSUserDefaults *defaults = (NSUserDefaults *)[notification object];
+    
+    NSInteger goal = [defaults integerForKey:@"goal"];
+    self.goalLabel.text = [NSString stringWithFormat:@"%d", goal];
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,6 +55,10 @@
     self.totalLabel.text = [NSString stringWithFormat:@"%d", total];
     [amountHistory addObject: [NSNumber numberWithInt:self.amountText.text.intValue]];
     
+    if (total >= self.goalLabel.text.intValue){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You reached your goal!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:TRUE];
